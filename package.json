@@ -32,12 +32,8 @@
   },
   "homepage": "https://github.com/DadUndead/ngx-scorm-wrapper#readme",
   "scripts": {
-    "build": "npm run build:esm && npm run build:umd",
-    "build:esm": "gulp inline-templates && npm run ngcompile",
-    "build:esm:watch": "gulp build:esm:watch",
-    "build:umd": "webpack --config webpack-umd.config.ts",
-    "build:umd:watch": "npm run build:umd -- --watch",
-    "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
+    "build": "ng build lib --configuration production",
+    "publish": "npm --cwd dist/lib && npm publish",
     "ci": "npm run lint && npm run test && npm run build && npm run docs",
     "clean:all": "npm run clean:tmp && rimraf node_modules",
     "clean:tmp": "rimraf coverage dist tmp docs",
@@ -54,20 +50,25 @@
     "preversion": "npm run ci",
     "test": "karma start",
     "test:watch": "karma start --auto-watch --no-single-run",
-    "tslint": "tslint"
+    "tslint": "tslint",
+    "ng": "ng"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
   "peerDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0"
+    "@angular/common": "^17.3.7",
+    "@angular/core": "^17.3.7"
   },
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular-devkit/build-angular": "^17.3.7",
+    "@angular/cli": "^17.3.7",
+    "@angular/common": "^17.3.7",
+    "@angular/compiler": "^17.3.7",
+    "@angular/compiler-cli": "^17.3.7",
+    "@angular/core": "^17.3.7",
+    "@angular/platform-browser": "^17.3.7",
+    "@angular/platform-browser-dynamic": "^17.3.7",
     "@compodoc/compodoc": "^1.0.0-beta.9",
     "@types/jasmine": "^2.5.47",
     "@types/karma": "^1.7.0",
@@ -94,7 +95,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
     "natives": "^1.1.6",
-    "node-sass": "^4.11.0",
+    "ng-packagr": "^17.3.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "rxjs": "^5.3.1",
@@ -103,7 +104,7 @@
     "to-string-loader": "^1.1.5",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
+    "typescript": "^5.4.5",
     "webpack": "^3.6.0",
     "webpack-angular-externals": "^1.0.2",
     "webpack-rxjs-externals": "^1.0.0",

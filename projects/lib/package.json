@@ -1,0 +1,38 @@
+{
+  "name": "ngx-scorm-wrapper-plus",
+  "description": "Angular scorm wrapper",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular17",
+    "aot",
+    "aot-compatible",
+    "aot-compilation",
+    "scorm",
+    "scorm12",
+    "scrom2004",
+    "scorm-wrapper",
+    "typescript"
+  ],
+  "author": {
+    "name": "Diondre Edwards",
+    "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diondree/ngx-scorm-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diondree/ngx-scorm-wrapper/issues"
+  },
+  "homepage": "https://github.com/DadUndead/ngx-scorm-wrapper#readme"
+}

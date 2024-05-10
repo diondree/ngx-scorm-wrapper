@@ -1,37 +1,27 @@
-# `ngx-scorm-wrapper` - Scorm wrapper service for angular projects
+# MyWorkspace
 
-This project is based on AngularJS version which can be found here: https://github.com/patamechanix/angularjs-scorm-wrapper
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-[![Build Status](https://travis-ci.org/DadUndead/ngx-scorm-wrapper.svg?branch=master)](https://travis-ci.org/DadUndead/ngx-scorm-wrapper)
-[![codecov](https://codecov.io/gh/DadUndead/ngx-scorm-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/DadUndead/ngx-scorm-wrapper)
-[![npm version](https://badge.fury.io/js/ngx-scorm-wrapper.svg)](https://badge.fury.io/js/ngx-scorm-wrapper)
+## Development server
 
-## Quick start
-Install (check out the demo implementation -> [ngx-scorm-wrapper-demo](https://github.com/DadUndead/ngx-scorm-wrapper-demo))
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-```$xslt
-npm i ngx-scorm-wrapper
-```
+## Code scaffolding
 
-Add ```ScormWrapperService``` to your module ```providers```.
-```$xslt
-import { ScormWrapperModule } from 'ngx-scorm-wrapper';
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-@NgModule({
-  imports: [
-    ScormWrapperModule
-  ],
-  declarations: [
-  ],
-  providers: [],
-  bootstrap: []
-})
-export class AppModule {}
-```
-You can use the ScormWrapperService in any of your components (after you added it to the providers in your app.module). Just add the service to your component class constructor like:
+## Build
 
-```
-constructor(private scormWrapperService: ScormWrapperService)
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-You can now use the methods found here: [angularjs-scorm-wrapper](https://github.com/patamechanix/angularjs-scorm-wrapper)
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

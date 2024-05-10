@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { ScormWrapperService } from './services';
-import { WindowRef } from './services/window-ref';
+import { ScormWrapperService } from './public-api';
+import { WindowRef } from './window-ref';
 
 @NgModule({
   providers: [

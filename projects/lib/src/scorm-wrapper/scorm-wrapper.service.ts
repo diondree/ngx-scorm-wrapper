@@ -62,12 +62,12 @@ import { Injectable } from '@angular/core';
 import { WindowRef } from '../window-ref';
 
 export type ApiCallFunctionType = (param?: string,
-                                   value?: string) => void | string | number | boolean;
+  value?: string) => void | string | number | boolean;
 
 @Injectable()
 export class ScormWrapperService {
   private version = 'Auto';
-  private API: object = null;
+  private API: any = null;
   private scormVersions = ['Auto', '1.2', '2004'];
   private win: any;
 
@@ -150,7 +150,7 @@ export class ScormWrapperService {
   }
 
   public getAPICall(funcname12: string,
-                    funcname2004: string): ApiCallFunctionType {
+    funcname2004: string): ApiCallFunctionType {
 
     if (!this.API) {
       this.getAPIHandle();
@@ -163,13 +163,17 @@ export class ScormWrapperService {
 
     switch (this.version) {
       case '2004':
-        return function() {
+        return function () {
           return API[funcname2004].apply(API, arguments);
         };
 
       case '1.2':
-        return function() {
+        return function () {
           return API[funcname12].apply(API, arguments);
+        };
+      default:
+        return function () {
+
         };
     }
   }
